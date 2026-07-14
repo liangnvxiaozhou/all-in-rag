@@ -46,15 +46,23 @@ prompt = ChatPromptTemplate.from_template("""请根据下面提供的上下文�
                                           )
 
 # 配置大语言模型
-
 # 使用 AIHubmix
 llm = ChatOpenAI(
-    model="glm-4.7-flash-free",
+    model="gpt-5.5-free",
     temperature=0.7,
     max_tokens=4096,
-    api_key=os.getenv("DEEPSEEK_API_KEY"),
+    api_key=os.getenv("sk-ezyHRTNz9DqLYor8179dFdC61aFd488cA245DaE69d110381"), # Changed to match your AIHubMix key variable
     base_url="https://aihubmix.com/v1"
 )
+
+# 使用 AIHubmix
+#llm = ChatOpenAI(
+#    model="glm-4.7-flash-free",
+#    temperature=0.7,
+#    max_tokens=4096,
+#    api_key=os.getenv("DEEPSEEK_API_KEY"),
+#    base_url="https://aihubmix.com/v1"
+#)
 
 # llm = ChatOpenAI(
 #     model="deepseek-chat",
